@@ -31,10 +31,6 @@ app.use(passport.session());
 
 const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-  res.send("<a href='/auth/google'><button>sign in</button></a>");
-});
-
 require("./routes/authRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
